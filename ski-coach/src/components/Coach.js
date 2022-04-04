@@ -1,8 +1,9 @@
 import React from 'react'
 import { FaTimes } from 'react-icons/fa';
+import { AiFillEdit } from "react-icons/ai";
 import { Link } from 'react-router-dom';
 
-export default function Task({ coach, deleteCoach }) {
+export default function Task({ coach, deleteCoach, editCoach }) {
     return (
         <li>
             <div>
@@ -12,6 +13,9 @@ export default function Task({ coach, deleteCoach }) {
 
                     </Link>
                     <FaTimes onClick={() => { deleteCoach(coach._id) }} />
+                    <a href="/">
+                        <AiFillEdit onClick={() => { deleteCoach(coach._id) }} />
+                    </a>
                 </div>
                 <p>{coach.email}</p>
             </div>
